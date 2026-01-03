@@ -1,14 +1,16 @@
-# Don't force the desktop mode on synced YouTube tabs
+# Don't force desktop mode on synced YouTube tabs
 
-As of 2026, YouTube adds the "app=desktop" query parameter when redirecting from its mobile website. It forces the tab to use the desktop version of the site.
+YouTube adds `&app=desktop` on a redirect from `m.youtube.com`, which makes the tab always open in desktop mode. This fixes that.
 
-This is very annoying to deal with when the tab is synced and opened on mobile:
+Here's how the problem occurs:
 
-1) On mobile, the m.youtube.com mobile version is opened.
-2) On desktop, m. is removed and app=desktop is added.
-3) On mobile, the desktop version of the site is opened (the annoying part).
+1) On mobile, a `m.youtube.com` tab is opened.
+2) The same tab is opened on desktop.
+3) YouTube redirects `m.youtube.com` to `www.youtube.com` and adds the `app=desktop` query parameter.
+4) The same tab is opened on mobile.
+5) The query parameter is never removed, so the desktop mode of the site is loaded.
 
-This small browser extension stops YouTube from forcing desktop mode on synced tabs by removing thie app=desktop query parameter.
+This browser extension prevents `app=desktop` from being added by redirecting from `m.youtube.com` to `www.youtube.com` directly.
 
 ## Installation instructions
 

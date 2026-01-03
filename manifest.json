@@ -1,12 +1,10 @@
 {
-  "name": "Don't force the desktop mode on synced YouTube tabs",
-  "description": "This small browser extension stops YouTube from forcing desktop mode on synced tabs by removing the app=desktop query parameter.",
+  "name": "Don't force desktop mode on synced YouTube tabs",
+  "description": "YouTube adds `&app=desktop` on a redirect from `m.youtube.com`, which makes the tab always open in desktop mode. This fixes that.",
   "version": "1.0",
   "manifest_version": 3,
   "permissions": ["webNavigation"],
-  "host_permissions": [
-    "https://*.youtube.com/*"
-  ],
+  "host_permissions": ["https://m.youtube.com/*"],
   "background": {
     "service_worker": "worker.js"
   }
