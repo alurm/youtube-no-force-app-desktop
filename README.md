@@ -8,7 +8,9 @@ This is very annoying to deal with when the tab is synced and opened on mobile:
 2) On desktop, m. is removed and app=desktop is added.
 3) On mobile, the desktop version of the site is opened (the annoying part).
 
-This small browser extension stops YouTube from forcing desktop mode on synced tabs by removing thie app=desktop query parameter.
+This small browser extension stops YouTube from forcing desktop mode on synced tabs by preventing the app=desktop query parameter from being added to the URL.
+
+It does this by redirecting from m.youtube.com to youtube.com directly.
 
 ## Installation instructions
 
