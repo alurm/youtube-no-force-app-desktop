@@ -1,3 +1,11 @@
-files := manifest.json icon.png worker.js
+files := LICENSE manifest.json icon.png worker.js
 
-extension.zip: $(files); zip extension.zip $(files)
+.PHONY: archive.zip
+archive.zip: $(files)
+	rm -f $@
+	make manifest "browser=$(browser)"
+	zip $@ $(files)
+
+.PHONY: manifest
+manifest:
+	cue export manifest.cue -t "browser=$(browser)" > manifest.json
