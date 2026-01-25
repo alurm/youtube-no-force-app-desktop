@@ -12,7 +12,13 @@ Here's how the problem occurs:
 
 This browser extension prevents `app=desktop` from being added by redirecting from `m.youtube.com` to `www.youtube.com` directly.
 
-## Installation instructions
+## Installation
+
+### Chrome
+
+Visit the Chrome web store page: https://chromewebstore.google.com/detail/dont-force-desktop-mode-o/jkmnboelmllcdpijkgigpifgihfjdbnf
+
+Or, you can do it manually:
 
 1) Open chrome://extensions.
 2) Enable "Developer mode" switch.
