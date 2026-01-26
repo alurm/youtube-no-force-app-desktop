@@ -16,7 +16,7 @@ This browser extension prevents `app=desktop` from being added by redirecting fr
 
 ### Chrome
 
-Visit the Chrome web store page: https://chromewebstore.google.com/detail/dont-force-desktop-mode-o/jkmnboelmllcdpijkgigpifgihfjdbnf
+Visit the Chrome web store page: https://chromewebstore.google.com/detail/dont-force-desktop-mode-o/jkmnboelmllcdpijkgigpifgihfjdbnf.
 
 Or, you can do it manually:
 
@@ -24,3 +24,16 @@ Or, you can do it manually:
 2) Enable "Developer mode" switch.
 3) Clone this code.
 4) Load the folder with the "Load unpacked" button.
+
+### Firefox
+
+Visit the Mozilla store page: https://addons.mozilla.org/en-US/firefox/addon/dont-force-desktop-on-youtube.
+
+## Building
+
+`manifest.json` differs on Firefox and Chrome, so there's a build step to generate it.
+
+Instructions for producing `archive.zip`:
+
+1) On a supported operating system (Linux, MacOS), install the Nix package manager, then run `nix develop` (or setup environment manually).
+2) Run `make archive.zip browser=$BROWSER`, where `$BROWSER` is a supported browser (look at [Makefile](Makefile) for details).
