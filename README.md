@@ -27,7 +27,7 @@ Or, you can do it manually:
 
 ### Firefox
 
-Visit the Mozilla store page (maybe not approved yet): https://addons.mozilla.org/en-US/firefox/addon/dont-force-desktop-on-youtube.
+Visit the Mozilla store page: https://addons.mozilla.org/en-US/firefox/addon/dont-force-desktop-on-youtube.
 
 ## Building
 
