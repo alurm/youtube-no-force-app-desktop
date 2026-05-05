@@ -1,3 +1,5 @@
+![The extension's icon.](icon.png)
+
 # Don't force desktop mode on synced YouTube tabs
 
 YouTube adds `&app=desktop` on a redirect from `m.youtube.com`, which makes the tab always open in desktop mode. This fixes that.
